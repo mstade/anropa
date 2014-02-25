@@ -4,7 +4,7 @@
   "description": "Turn any object into an event dispatcher.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "istanbul test _mocha --report html -- -R spec"
   },
   "author": "Marcus Stade",
   "license": "MIT",

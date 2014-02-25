@@ -26,8 +26,8 @@ describe('Anrop', function() {
       expect(ee.on('foo', function() { a = true })).to.be.ok
       expect(ee.on('foo', function() { b = true })).to.be.ok
 
+      expect(a).to.not.be.ok && expect(b).to.not.be.ok
       ee.emit('foo')
-
       expect(a).to.be.ok && expect(b).to.be.ok
     })
 
@@ -46,6 +46,12 @@ describe('Anrop', function() {
 
       expect(n).to.equal(2)
     })
+
+    it('should throw an error when handler is not a function', function() {
+      expect(function() {
+        anrop().on('foo')
+      }).to.throw()
+    })
   })
 
   describe('off', function() {
@@ -60,6 +66,22 @@ describe('Anrop', function() {
       ee.emit('foo')
 
       expect(n).to.equal(1)
+    })
+
+    it('should only remove the specified handler, leaving others be', function() {
+      var n   = 0
+        , ee  = anrop()
+        , inc = function() { n++ }
+
+      ee.on('foo', inc)
+      ee.emit('foo')
+      expect(n).to.equal(1)
+      
+      ee.on('foo', function() { n++ })
+      expect(ee.off('foo', inc)).to.be.ok
+      ee.emit('foo')
+
+      expect(n).to.equal(2)
     })
 
     it('should remove all handlers for the specified type if no handler is specified', function() {
@@ -91,6 +113,10 @@ describe('Anrop', function() {
 
       expect(n).to.equal(3)
     })
+
+    it('should return false for handlers that were never registered', function() {
+      anrop().off('foo', function() {})
+    })
   })
 
   describe('once', function() {
@@ -103,6 +129,13 @@ describe('Anrop', function() {
       ee.emit('foo')
 
       expect(n).to.equal(1)
+    })
+
+
+    it('should throw an error when handler is not a function', function() {
+      expect(function() {
+        anrop().on('foo')
+      }).to.throw()
     })
   })
 
