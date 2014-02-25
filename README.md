@@ -1,6 +1,8 @@
 anrop
 =====
 
+[![Build Status](https://travis-ci.org/mstade/anrop.png?branch=master)](https://travis-ci.org/mstade/anrop)
+
 Turn any object into an event dispatcher.
 
 Usage
