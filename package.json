@@ -1,0 +1,17 @@
+{
+  "name": "anrop",
+  "version": "0.0.0",
+  "description": "Turn any object into an event dispatcher.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Marcus Stade",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "~1.17.1",
+    "chai": "~1.9.0",
+    "coveralls": "~2.8.0",
+    "mocha-lcov-reporter": "0.0.1"
+  }
+}
