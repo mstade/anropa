@@ -1,10 +1,6 @@
 anrop
 =====
 
-[![Build Status](https://travis-ci.org/mstade/anrop.png?branch=master)](https://travis-ci.org/mstade/anrop)
-
-[![Coverage Status](https://coveralls.io/repos/mstade/anrop/badge.png)](https://coveralls.io/r/mstade/anrop)
-
 Turn any object into an event dispatcher.
 
 Usage
@@ -20,3 +16,9 @@ source.on('data', function(msg) {
 
 emit('data', 'hello, world!')
 ```
+
+Status
+------
+
+[![Build Status](https://travis-ci.org/mstade/anrop.png?branch=master)](https://travis-ci.org/mstade/anrop)
+[![Coverage Status](https://coveralls.io/repos/mstade/anrop/badge.png)](https://coveralls.io/r/mstade/anrop)
