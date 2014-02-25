@@ -1,5 +1,5 @@
 {
-  "name": "anrop",
+  "name": "anropa",
   "version": "0.1.0",
   "description": "Turn any object into an event dispatcher.",
   "main": "index.js",
@@ -17,13 +17,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mstade/anrop.git"
+    "url": "git://github.com/mstade/anropa.git"
   },
   "keywords": [
     "events"
   ],
   "bugs": {
-    "url": "https://github.com/mstade/anrop/issues"
+    "url": "https://github.com/mstade/anropa/issues"
   },
-  "homepage": "https://github.com/mstade/anrop"
+  "homepage": "https://github.com/mstade/anropa"
 }
